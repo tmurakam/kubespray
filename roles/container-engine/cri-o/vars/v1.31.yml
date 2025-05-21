@@ -10,7 +10,7 @@ crio_bin_files:
 crio_libexec_files:
   - conmon
   - conmonrs
-  - crun
+  #- crun
   - runc
 
 crio_status_command: crio status

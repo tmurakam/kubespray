@@ -44,7 +44,7 @@ crio_root: "/var/lib/containers/storage"
 # The crio_runtimes variable defines a list of OCI compatible runtimes.
 crio_runtimes:
   - name: crun
-    path: "{{ crio_runtime_bin_dir }}/crun"
+    path: "{{ bin_dir }}/crun"  # Use crun installed by crun role, not in cri-o
     type: oci
     root: /run/crun
 
@@ -68,7 +68,7 @@ runc_runtime:
 # crun is a fast and low-memory footprint OCI Container Runtime fully written in C.
 crun_runtime:
   name: crun
-  path: "{{ crio_runtime_bin_dir }}/crun"
+  path: "{{ bin_dir }}/crun"  # Use crun installed by crun role, not in cri-o
   type: oci
   root: /run/crun
 
